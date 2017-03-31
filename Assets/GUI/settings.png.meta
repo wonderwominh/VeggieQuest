@@ -1,0 +1,552 @@
+fileFormatVersion: 2
+guid: 70ccaeb43e1a54220903f317dff72d50
+timeCreated: 1488392438
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: settings_0
+    21300002: settings_1
+    21300004: settings_2
+    21300006: settings_3
+    21300008: settings_4
+    21300010: settings_5
+    21300012: settings_6
+    21300014: settings_7
+    21300016: settings_8
+    21300018: settings_9
+    21300020: settings_10
+    21300022: settings_11
+    21300024: settings_12
+    21300026: settings_13
+    21300028: settings_14
+    21300030: settings_15
+    21300032: settings_16
+    21300034: settings_17
+    21300036: settings_18
+    21300038: settings_19
+    21300040: settings_20
+    21300042: settings_21
+    21300044: settings_22
+    21300046: settings_23
+    21300048: settings_24
+    21300050: settings_25
+    21300052: settings_26
+    21300054: settings_27
+    21300056: settings_28
+    21300058: settings_29
+    21300060: settings_30
+    21300062: settings_31
+    21300064: settings_32
+    21300066: settings_33
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: settings_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 9896
+        width: 532
+        height: 566
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_1
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 9896
+        width: 532
+        height: 566
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_2
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 9893
+        width: 537
+        height: 571
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_3
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 9893
+        width: 532
+        height: 561
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 9279
+        width: 530
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_5
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 9279
+        width: 532
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_6
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 9279
+        width: 535
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_7
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 9279
+        width: 532
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 8604
+        width: 536
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_9
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 8604
+        width: 535
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_10
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 8644
+        width: 488
+        height: 527
+      alignment: 9
+      pivot: {x: 0.49999908, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_11
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 8599
+        width: 542
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_12
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 7966
+        width: 542
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_13
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 7966
+        width: 556
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_14
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 7961
+        width: 555
+        height: 569
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_15
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 7961
+        width: 561
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_16
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 7275
+        width: 551
+        height: 574
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_17
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 7345
+        width: 553
+        height: 568
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_18
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 7344
+        width: 547
+        height: 566
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_19
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 7375
+        width: 542
+        height: 559
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_20
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 6592
+        width: 535
+        height: 567
+      alignment: 9
+      pivot: {x: 0.4999997, y: 0.551634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_21
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 6602
+        width: 535
+        height: 570
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_22
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 6610
+        width: 533
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_23
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 6611
+        width: 532
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_24
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 5983
+        width: 532
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_25
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 6004
+        width: 532
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_26
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 5978
+        width: 536
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_27
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 5935
+        width: 540
+        height: 562
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_28
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 5366
+        width: 535
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_29
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 5374
+        width: 535
+        height: 561
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_30
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 40
+        width: 2710
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_31
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 752
+        width: 2974
+        height: 4397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_32
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 692
+        width: 3086
+        height: 4536
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: settings_33
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 735
+        width: 3014
+        height: 4493
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
