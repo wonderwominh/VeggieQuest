@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class Registration : MonoBehaviour {
     
@@ -39,6 +39,7 @@ public class Registration : MonoBehaviour {
         yield return w;
         if(w.error == null) {
             message.text = w.text;
+            SceneManager.LoadScene("Login");
         }
         else {
             message.text = "ERROR: " + w.error;
