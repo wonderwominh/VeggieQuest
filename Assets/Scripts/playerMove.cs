@@ -4,31 +4,40 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class playerMove : MonoBehaviour {
-	
-	public float moveForce = 20f, jumpForce = 700f, maxVelocity = 4f;
-	//public GameObject WoodSprite;
+    public GameObject Door;
+    public DeathScene grimReaper;
+    public DoorStateMachineController controller;
+    public float moveForce = 20f, jumpForce = 700f, maxVelocity = 4f;
 
 	private Rigidbody2D myBody;
 	private Animator anim;
 	private bool grounded;
-
-
+    private bool frozen;
+    private int keys;
+ 
 	void Awake(){
 		variableInit();
-	}
-	
-	
-
+    }
+    
 	// Use this for initialization
 	void Start () {
-		
-
-
+        Door = GameObject.FindGameObjectWithTag("Door");
+        controller = Door.GetComponent<DoorStateMachineController>();
+        //Physics2D.IgnoreLayerCollision(0, 10);
+        keys = 0;
+        frozen = false;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		PlayerWalkKeyboard();
+        if (!frozen)
+        {
+            PlayerWalkKeyboard();
+        }else
+        {
+            freezePlayer();
+            grimReaper.reap();
+        }
 	}
 	
 	void variableInit(){
@@ -99,37 +108,37 @@ public class playerMove : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D target){
-
-
-
-
-		if (target.tag == "Trap")
-			{
-				//Destroy(target.gameObject);
-				Destroy(gameObject);
-
-
-				//WoodSprite.SetActive(true);
-
-
-			}
-		if (target.tag == "MonsterChip")
+		if (target.gameObject.tag == "Trap")
 		{
-			//Destroy(target.gameObject);
-			Destroy(gameObject);
-
-
-			//WoodSprite.SetActive(true);
-
-
+            frozen = true;
+		}
+		if (target.gameObject.tag == "MonsterChip")
+		{
+            frozen = true;
 		}
 
-		if (target.tag == "Key" )
+		if (target.gameObject.tag == "Key" )
 		{	
 			Destroy(target.gameObject);
-			//Destroy(gameObject);
-
+            controller.keyCount = 1;
 		}
-		
-	}
+
+        if (target.gameObject.tag == "Door")
+        {
+            controller.openDoor();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D target)
+    {
+        if (target.gameObject.tag == "Door")
+        {
+            controller.closeDoor();
+        }
+    }
+
+    private void freezePlayer()
+    {
+        myBody.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
 }

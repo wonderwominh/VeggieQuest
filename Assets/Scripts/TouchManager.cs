@@ -7,7 +7,7 @@ public class TouchManager :  MonoBehaviour {
 	public static bool guiTouch = false;
 
 	public void TouchInput (GUITexture texture)
-	{
+    {/*
 		if(texture.HitTest(Input.GetTouch(0).position))
 		{
 			switch (Input.GetTouch(0).phase)
@@ -54,6 +54,7 @@ public class TouchManager :  MonoBehaviour {
 				break;
 			}
 		}
-	}
+	*/
+    }
 
 }
