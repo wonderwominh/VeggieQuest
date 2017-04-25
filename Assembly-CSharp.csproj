@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bounce.cs" />
      <Compile Include="Assets\Scripts\ButtonMovement.cs" />
+     <Compile Include="Assets\Scripts\Joystick.cs" />
      <Compile Include="Assets\Scripts\Login.cs" />
      <Compile Include="Assets\Scripts\MenuCtrl.cs" />
      <Compile Include="Assets\Scripts\MonsterChipMove.cs" />

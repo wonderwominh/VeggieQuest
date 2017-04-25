@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UI;
 
 public class playerMove : MonoBehaviour {
 	
@@ -12,9 +13,11 @@ public class playerMove : MonoBehaviour {
 	private Animator anim;
 	private bool grounded;
 
+	private bool moveleft, moveright;
 
 	void Awake(){
 		variableInit();
+		GameObject.Find ("jump").GetComponent<Button> ().onClick.AddListener (() => Jump ());
 	}
 	
 	
@@ -28,13 +31,61 @@ public class playerMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		PlayerWalkKeyboard();
+		playerWalkJoystick ();
+//		PlayerWalkKeyboard();
 	}
 	
 	void variableInit(){
 		
 		myBody = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+	}
+
+//	public  void setMoveRight (bool moveright){
+//		this.moveright = moveright;
+//	}
+
+	public  void setMoveLeft (bool moveleft){
+		this.moveleft = moveleft;
+		this.moveright = !moveleft;
+	}
+
+	public void DoNotMove (){
+		this.moveleft = false;
+		this.moveright = false;
+	}
+		
+
+	void playerWalkJoystick (){
+		float forceX = 0f;
+		float vel = Mathf.Abs(myBody.velocity.x);
+
+		if (moveright) {
+			if (vel < maxVelocity) {
+				forceX = moveForce;
+			}
+
+			Vector3 scale = transform.localScale;
+			scale.x = 1f;
+			transform.localScale = scale;
+
+			anim.SetBool ("walkAnimation", true);
+		} else if (moveleft) {
+			if (vel < maxVelocity) {
+				forceX = -moveForce;
+			}
+
+			Vector3 scale = transform.localScale;
+			scale.x = -1f;
+			transform.localScale = scale;
+
+			anim.SetBool ("walkAnimation", true);
+		} else {
+			anim.SetBool ("walkAnimation", false);
+		}
+
+
+		myBody.AddForce(new Vector2(forceX, 0));
 	}
 
 	void PlayerWalkKeyboard() {
@@ -88,6 +139,13 @@ public class playerMove : MonoBehaviour {
 	
 	}
 
+
+	public void Jump() {
+		if (grounded){
+			grounded = false;
+			myBody.AddForce(new Vector2(0, jumpForce));
+		}
+	}
 	public void BouncePlayer(float force){
 		myBody.AddForce(new Vector2(force/3, force));
 	}
