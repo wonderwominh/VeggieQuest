@@ -1,30 +1,27 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class TouchManager :  MonoBehaviour {
-	
+public class TouchManager : MonoBehaviour {
+
 	public static bool guiTouch = false;
 
-	public void TouchInput (GUITexture texture)
-    {/*
+	public void TouchInput(GUITexture texture)
+	{
 		if(texture.HitTest(Input.GetTouch(0).position))
 		{
-			switch (Input.GetTouch(0).phase)
+			switch(Input.GetTouch(0).phase)
 			{
 			case TouchPhase.Began:
-				SendMessage("OnFirstTouchBegan");
-				SendMessage("OnFirstTouch");
+				SendMessage ("OnFirstTouchBegan");
 				guiTouch = true;
 				break;
 			case TouchPhase.Stationary:
 				SendMessage("OnFirstTouchStayed");
-				SendMessage("OnFirstTouch");
 				guiTouch = true;
 				break;
 			case TouchPhase.Moved:
 				SendMessage("OnFirstTouchMoved");
-				SendMessage("OnFirstTouch");
 				guiTouch = true;
 				break;
 			case TouchPhase.Ended:
@@ -35,26 +32,21 @@ public class TouchManager :  MonoBehaviour {
 		}
 		if(texture.HitTest(Input.GetTouch(1).position))
 		{
-			switch (Input.GetTouch(1).phase)
+			switch(Input.GetTouch(1).phase)
 			{
 			case TouchPhase.Began:
-				SendMessage("OnFirstTouchBegan");
-				SendMessage("OnFirstTouch");
+				SendMessage("OnSecondTouchBegan");
 				break;
 			case TouchPhase.Stationary:
-				SendMessage("OnFirstTouchStayed");
-				SendMessage("OnFirstTouch");
+				SendMessage("OnSecondTouchStayed");
 				break;
 			case TouchPhase.Moved:
-				SendMessage("OnFirstTouchMoved");
-				SendMessage("OnFirstTouch");
+				SendMessage("OnSecondTouchMoved");
 				break;
 			case TouchPhase.Ended:
-				SendMessage("OnFirstTouchEnded");
+				SendMessage("OnSecondTouchEnded");
 				break;
 			}
 		}
-	*/
-    }
-
+	}
 }

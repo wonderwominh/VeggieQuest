@@ -22,9 +22,7 @@ public class MonsterChipMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-
-	}
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -41,15 +39,12 @@ public class MonsterChipMove : MonoBehaviour {
 	void ChangeDirection (){
 		collision = Physics2D.Linecast(startPos.position, endPos.position, 1 << LayerMask.NameToLayer("GroundMove"));
 
-		//Debug.DrawLine(startPos.position, endPos.position, Color.green);
-
 		if (!collision){
 			Vector3 temp = transform.localScale;
-			if (temp.x == -1f){
-				temp.x = 1f;
-				
+			if (temp.x < 0){
+				temp.x  = Mathf.Abs(temp.x);
 			}else {
-				temp.x = -1f;
+				temp.x *= -1f;
 			}
 
 			transform.localScale = temp;

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class VictoryScene : MonoBehaviour
 {
     public Texture curtain;
+    public string levelToLoad;
 
     private float alphaFadeValue;
     private bool fadingOut;
@@ -44,7 +45,7 @@ public class VictoryScene : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("VictoryScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("VictoryScene1", LoadSceneMode.Single);
         }
     }
 
@@ -52,8 +53,7 @@ public class VictoryScene : MonoBehaviour
     {
         if (btnPushed == "nextLevel")
         {
-            //SceneManager.LoadSceneAsync("scene2", LoadSceneMode.Single);
-            Debug.Log("Go to the next level here!");
+            SceneManager.LoadSceneAsync(levelToLoad, LoadSceneMode.Single);
         }
         else if (btnPushed == "quit")
         {
