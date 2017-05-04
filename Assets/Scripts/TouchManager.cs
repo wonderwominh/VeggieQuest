@@ -8,45 +8,62 @@ public class TouchManager : MonoBehaviour {
 
 	public void TouchInput(GUITexture texture)
 	{
-		if(texture.HitTest(Input.GetTouch(0).position))
-		{
-			switch(Input.GetTouch(0).phase)
-			{
-			case TouchPhase.Began:
-				SendMessage ("OnFirstTouchBegan");
-				guiTouch = true;
-				break;
-			case TouchPhase.Stationary:
-				SendMessage("OnFirstTouchStayed");
-				guiTouch = true;
-				break;
-			case TouchPhase.Moved:
-				SendMessage("OnFirstTouchMoved");
-				guiTouch = true;
-				break;
-			case TouchPhase.Ended:
-				SendMessage("OnFirstTouchEnded");
-				guiTouch = false;
-				break;
-			}
-		}
-		if(texture.HitTest(Input.GetTouch(1).position))
-		{
-			switch(Input.GetTouch(1).phase)
-			{
-			case TouchPhase.Began:
-				SendMessage("OnSecondTouchBegan");
-				break;
-			case TouchPhase.Stationary:
-				SendMessage("OnSecondTouchStayed");
-				break;
-			case TouchPhase.Moved:
-				SendMessage("OnSecondTouchMoved");
-				break;
-			case TouchPhase.Ended:
-				SendMessage("OnSecondTouchEnded");
-				break;
-			}
-		}
-	}
+        if(Input.touchCount > 0 && Input.touchCount <= 1) {
+            if (texture.HitTest(Input.GetTouch(0).position))
+            {
+                switch (Input.GetTouch(0).phase)
+                {
+                    case TouchPhase.Began:
+                        SendMessage("OnFirstTouchBegan");
+                        guiTouch = true;
+                        break;
+                    case TouchPhase.Stationary:
+                        SendMessage("OnFirstTouchStayed");
+                        guiTouch = true;
+                        break;
+                    case TouchPhase.Ended:
+                        SendMessage("OnFirstTouchStop");
+                        guiTouch = false;
+                        break;
+                }
+            }
+        }else if(Input.touchCount>1){
+            if (texture.HitTest(Input.GetTouch(0).position))
+            {
+                switch (Input.GetTouch(0).phase)
+                {
+                    case TouchPhase.Began:
+                        SendMessage("OnFirstTouchBegan");
+                        guiTouch = true;
+                        break;
+                    case TouchPhase.Stationary:
+                        SendMessage("OnFirstTouchStayed");
+                        guiTouch = true;
+                        break;
+                    case TouchPhase.Ended:
+                        SendMessage("OnFirstTouchStop");
+                        guiTouch = false;
+                        break;
+                }
+            }
+            if (texture.HitTest(Input.GetTouch(1).position))
+		    {
+			    switch(Input.GetTouch(1).phase)
+			    {
+			    case TouchPhase.Began:
+				    SendMessage("OnSecondTouchBegan");
+                        guiTouch = true;
+                        break;
+			    case TouchPhase.Stationary:
+				    SendMessage("OnSecondTouchStayed");
+                        guiTouch = true;
+                        break;
+			    case TouchPhase.Ended:
+				    SendMessage("OnSecondTouchStop");
+                        guiTouch = false;
+                        break;
+			    }
+             }
+        }
+    }
 }

@@ -5,11 +5,13 @@ public class DeathScene : MonoBehaviour {
 
     private float alphaFadeValue;
     public Texture curtain;
+    public string deathsceneToLoad;
     private bool fadingToDeath;
     private bool faded;
+    public string levelToLoad;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         alphaFadeValue = 0;
         fadingToDeath = false;
 	}
@@ -36,7 +38,7 @@ public class DeathScene : MonoBehaviour {
                 faded = true;
             }
         }else { 
-            SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
+            SceneManager.LoadScene(deathsceneToLoad, LoadSceneMode.Single);
         }
     }
 
@@ -44,7 +46,7 @@ public class DeathScene : MonoBehaviour {
     {
         if (btnPushed == "retry")
         {
-            SceneManager.LoadSceneAsync("scene1", LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(levelToLoad, LoadSceneMode.Single);
         }
         else if (btnPushed == "quit")
         {

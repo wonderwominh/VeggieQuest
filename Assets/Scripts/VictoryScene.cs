@@ -7,6 +7,7 @@ public class VictoryScene : MonoBehaviour
 {
     public Texture curtain;
     public string levelToLoad;
+    public string victorySceneToLoad;
 
     private float alphaFadeValue;
     private bool fadingOut;
@@ -45,7 +46,7 @@ public class VictoryScene : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("VictoryScene1", LoadSceneMode.Single);
+            SceneManager.LoadScene(victorySceneToLoad, LoadSceneMode.Single);
         }
     }
 

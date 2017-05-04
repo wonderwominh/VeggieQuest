@@ -8,8 +8,6 @@ public class MonsterChipMove : MonoBehaviour {
 
 	private bool collision;
 	private bool monsterCol;
-	//private Animator anim;
-	//private animator rob;
 
 	public float speed = 1f;
 	private Rigidbody2D myBody;

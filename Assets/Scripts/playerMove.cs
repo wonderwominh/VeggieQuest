@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class playerMove : MonoBehaviour {
     public GameObject Door;
@@ -13,7 +10,6 @@ public class playerMove : MonoBehaviour {
 	private Animator anim;
 	private bool grounded;
     private bool frozen;
-    private int keys;
  
 	void Awake(){
 		variableInit();
@@ -23,8 +19,6 @@ public class playerMove : MonoBehaviour {
 	void Start () {
         Door = GameObject.FindGameObjectWithTag("Door");
         controller = Door.GetComponent<DoorStateMachineController>();
-        //Physics2D.IgnoreLayerCollision(0, 10);
-        keys = 0;
         frozen = false;
 	}
 	
@@ -32,7 +26,7 @@ public class playerMove : MonoBehaviour {
 	void FixedUpdate () {
         if (!frozen)
         {
-            PlayerWalkKeyboard();
+            PlayerWalk();
         }else
         {
             freezePlayer();
@@ -46,13 +40,44 @@ public class playerMove : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 	}
 
-	void PlayerWalkKeyboard() {
+	public void PlayerWalk(string moveButton = "", bool jumpButton = false) {
 		float forceX = 0f;
 		float forceY = 0f;
 		float vel = Mathf.Abs(myBody.velocity.x);
-		float h = Input.GetAxisRaw("Horizontal");
+        bool spacebar;
+        float h;
 
-		if (h > 0)
+        if (!(moveButton.Length > 0))
+        {
+		    h = Input.GetAxisRaw("Horizontal");
+        }else
+        {
+            switch (moveButton)
+            {
+                case "left":
+                    Debug.Log("Detected Left");
+                    h = -1.0F;
+                    break;
+                case "right":
+                    Debug.Log("Detected Right");
+                    h = 1.0F;
+                    break;
+                default:
+                    Debug.Log("[ERROR] Invalid button send to playerMove::PlayerWalk() function.");
+                    h = 0;
+                    break;
+            }
+        }
+
+        if (!jumpButton) { 
+            spacebar = Input.GetKey(KeyCode.Space);
+        }else
+        {
+            Debug.Log("Detected Jump");
+            spacebar = true;
+        }
+
+        if (h > 0)
 		{
 			if (vel < maxVelocity)
 			{
@@ -63,7 +88,7 @@ public class playerMove : MonoBehaviour {
 			scale.x = 1f;
 			transform.localScale = scale;
 
-			anim.SetBool("walkAnimation", true);
+			//anim.SetBool("walkAnimation", true);
 
 
 		}
@@ -79,14 +104,14 @@ public class playerMove : MonoBehaviour {
 			scale.x = -1f;
 			transform.localScale = scale;
 
-			anim.SetBool("walkAnimation", true);
+			//anim.SetBool("walkAnimation", true);
 		}
 		else if (h == 0) {
 
-			anim.SetBool("walkAnimation", false);
+			//anim.SetBool("walkAnimation", false);
 		}
 
-		if (Input.GetKey(KeyCode.Space)){
+		if (spacebar){
 			if (grounded){
 				grounded = false;
 				forceY = jumpForce;
