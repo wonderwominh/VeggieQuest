@@ -39,17 +39,19 @@ public class PauseMenu : MonoBehaviour {
 		paused = false;
 	}
 
-	public void Restart()
+	public void Restart(string levelToLoad)
 	{
-		SceneManager.LoadScene ("scene1");
+		SceneManager.LoadScene (levelToLoad,LoadSceneMode.Single);
 	}
 
 	public void MainMenu()
-	{
-	}
+    {
+        SceneManager.LoadScene("Main_Menu",LoadSceneMode.Single);
+    }
 
 	public void Quit()
 	{
+        SceneManager.LoadScene("WelcomePage", LoadSceneMode.Single);
 	}
 
 }
